@@ -1,0 +1,335 @@
+
+<html>
+
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<style>
+.container {
+
+}
+
+.char {
+font-size: 20px;
+background: #38aadd;
+width: 100px;
+margin: 10px;
+height: 100px;
+border-radius: 10%;
+}
+
+.fwd 
+{
+margin-top: 35px;
+width: 50px;
+height: 50px;
+border-left: 5px white solid;
+border-bottom: 5px white solid;
+-webkit-transform: rotate(-225deg);
+}
+
+.bwd
+{
+margin-top: 20px;
+width: 50px;
+height: 50px;
+border-left: 5px white solid;
+border-bottom: 5px white solid;
+-webkit-transform: rotate(315deg);
+}
+
+.left
+{
+margin-top: 25px;
+margin-left: 15px;
+width: 50px;
+height: 50px;
+border-left: 5px white solid;
+border-bottom: 5px white solid;
+-webkit-transform: rotate(45deg);
+}
+
+
+.right
+{
+margin-top: 25px;
+margin-right: 15px;
+width: 50px;
+height: 50px;
+border-left: 5px white solid;
+border-bottom: 5px white solid;
+-webkit-transform: rotate(225deg);
+}
+
+.pivot
+{
+
+}
+
+.pan
+{
+
+}
+
+.tilt
+{
+
+}
+</style>
+
+<title>
+SpyBot
+</title>
+
+
+<script>
+
+function fwd()
+{
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "w"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+	//window.alert(xhr);
+    }
+});
+});
+
+}
+
+function bwd()
+{
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "s"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+	//window.alert(xhr);
+    }
+});
+});
+
+
+}
+
+function left()
+{
+
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "a"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+	//window.alert(xhr);
+    }
+});
+});
+
+}
+
+function right()
+{
+
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "d"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+	//window.alert(xhr);
+    }
+});
+});
+
+}
+
+function panup()
+{
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "pu"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+    //window.alert(xhr);
+    }
+});
+});
+
+}
+
+function pandw()
+{
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "pd"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+    //window.alert(xhr);
+    }
+});
+});
+
+}
+
+function tiltup()
+{
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "tu"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+    //window.alert(xhr);
+    }
+});
+});
+
+}
+
+function tiltdw()
+{
+$(document).ready(function(){      
+$.ajax({
+    url: "http://192.168.43.17",
+    data: {"dir": "td"},
+    success: function(response) {
+        //Do Somethi
+    },
+    error: function(xhr) {
+        //Do Something to handle error
+    //window.alert(xhr);
+    }
+});
+});
+
+}
+</script>
+</head>
+
+<body>
+    <center>
+        <h1 id="heap">SpyBot</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="http://192.168.43.17:8080/?action=stream" width="320" height="240">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4 char">
+                            </div>
+                            <div class="col-md-4 char">
+        	                   <a href="#" onclick="fwd()">
+            	                   <div class="fwd">
+            	                   </div>
+        	                   </a>
+                            </div>
+                            <div class="col-md-4 char">
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 char">
+                                    <a href="#" onclick="left()">
+                                        <div class="left">
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="col-md-4 char">
+                            </div>
+                            <div class="col-md-4 char">
+                                    <a href="#" onclick="right()">
+                                        <div class="right">
+                                        </div>
+                                    </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 char">
+                            </div>
+                            <div class="col-md-4 char">
+                                    <a href="#" onclick="bwd()">
+                                    <div class="bwd">
+                                    </div>
+                                    </a>
+                            </div>
+                            <div class="col-md-4 char">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    <!--pan and tilt-->
+                    <center>
+                    <div class="row">
+                            <div style="margin-left:220px" class="col-md-4 char">
+                                <div>PAN</div>
+                            </div>
+                            <div class="col-md-4 char">
+                                    <a href="#" onclick="pandw()">
+                                    <div class="left">
+                                    </div>
+                                    </a>
+                            </div>
+                            <div class="col-md-4 char">
+                                    <a href="#" onclick="panup()">
+                                    <div class="right">
+                                    </div>
+                                    </a>
+                            </div>
+                    
+                            <div class="col-md-4 char">
+                                <div>TILT</div>
+                            </div>
+                            <div class="col-md-4 char">
+                                    <a href="#" onclick="tiltup()">
+                                    <div class="fwd">
+                                    </div>
+                                    </a>
+                            </div>
+                            <div class="col-md-4 char">
+                                    <a href="#" onclick="tiltdw()">
+                                    <div class="bwd">
+                                    </div>
+                                    </a>
+                            </div>
+                    </div>
+                    </center>   
+            </div>
+    </center>
+</body>
+</html>
